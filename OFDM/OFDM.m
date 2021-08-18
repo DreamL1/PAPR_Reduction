@@ -65,6 +65,8 @@ for m = 1:N_iter
     % total energy
     sigEng = sigEng + sum(abs(ofdm.^2)); % conjugate to calculate energy
     %Power(:,m)=abs(x_GI).^2;
+    
+    % PAPR
     Average(m)=mean(Power(:,m));
     Peak(m)=max(Power(:,m));
 end
